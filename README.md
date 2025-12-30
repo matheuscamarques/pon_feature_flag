@@ -1,4 +1,4 @@
-# Feature Flag é Besteira: A Arquitetura Reativa do PON e a Compilação Dinâmica em Elixir
+# A Arquitetura Reativa do PON e a Compilação Dinâmica em Elixir
 
 Este projeto é uma implementação técnica que demonstra uma abordagem reativa para gerenciar Feature Flags em Elixir, inspirada no **Paradigma Orientado a Notificações (PON)** de Jean Marcelo Simão.
 
