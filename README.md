@@ -84,10 +84,6 @@ Metaprogramação em tempo de execução é uma técnica poderosa, mas que exige
 -   **Consistência em Cluster**: Em um ambiente distribuído, a notificação de mudança de configuração deve ser transmitida para todos os nós para garantir que todos os nós atualizem seu código.
 -   **Overhead de Compilação**: Esta técnica é ideal para flags estruturais que mudam raramente. Para flags que mudam com alta frequência (ex: por usuário em um teste A/B), uma abordagem como `:persistent_term` é mais adequada.
 
-## Conclusão
-
-Este projeto demonstra que é possível construir sistemas mais eficientes repensando padrões de arquitetura estabelecidos. Ao aplicar o Paradigma Orientado a Notificações com as ferramentas da plataforma Elixir/BEAM, criamos uma solução de Feature Flag que é não apenas performática, mas também alinhada com os princípios de sustentabilidade em software.
-
 ## A Arquitetura Reativa do PON e a Compilação Dinâmica em Elixir para Eficiência Extrema e Green Coding
 
 Este relatório técnico investiga a ineficiência estrutural inerente às implementações tradicionais de Feature Flags (sinalizadores de recursos) em sistemas de alta performance, propondo uma mudança paradigmática baseada no Paradigma Orientado a Notificações (PON), desenvolvido pelo pesquisador Jean Marcelo Simão. A análise desafia o consenso da indústria de que a verificação de condicional em tempo de execução (runtime checks) é um custo aceitável, demonstrando, através de evidências de arquitetura de computadores e eficiência energética (Green Coding), que a redundância temporal gerada por condicionais estáticas é uma fonte significativa de desperdício computacional.
@@ -393,17 +389,6 @@ Em um cluster Elixir, a recompilação é local ao nó.
 A tese de que "Feature Flag é besteira" serve como um alerta contra a complacência arquitetural. Ao aplicarmos o Paradigma Orientado a Notificações do Prof. Simão, transformamos um padrão de design passivo e dispendioso em uma arquitetura reativa e eficiente.
 
 A utilização de `Code.compile_quoted` em Elixir não é apenas um truque de linguagem; é a materialização da eficiência máxima, onde a estrutura do software se adapta fisicamente à sua configuração. Removemos a redundância temporal e estrutural, aliviamos a pressão sobre o branch predictor da CPU e contribuímos para o Green Coding ao eliminar bilhões de ciclos de processamento inútil. Embora exija rigor técnico para evitar armadilhas como a exaustão de átomos, esta técnica representa o estado da arte em sistemas BEAM de alta performance.
-
-#### 9.2 Sugestões de Título para o Artigo
-
-Para maximizar o impacto no Medium, o título deve equilibrar a provocação com a promessa técnica:
-
--   "Feature Flag é Besteira? A Técnica do PON Simão para Código Elixir Auto-Otimizável"
--   "Eliminando o If: Como Usar Code.compile_quoted e PON para Feature Flags de Custo Zero"
--   "Do Polling à Notificação: Green Coding em Elixir com os Princípios de Simão"
--   "Metaprogramação Reativa: Substituindo Feature Flags por Compilação Dinâmica na BEAM"
-
-deeper dive into the performance implications.
 
 ## Benchmark Results
 
